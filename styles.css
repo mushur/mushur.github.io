@@ -1,0 +1,111 @@
+:root{
+   --brand-purple:#6666AE;
+}
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#a8a8a8;
+  color:#111;
+  text-align:center;
+}
+
+.hero{
+  padding:80px 20px;
+  background:#2b2b2b;
+  color:#fff;
+}
+
+.tagline{
+  opacity:0.8;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 24px;
+  background: var(--brand-purple);
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.about{
+  padding:60px 20px;
+  max-width:800px;
+  margin:auto;
+}
+
+.contact-details{
+  max-width:520px;
+  margin:40px auto;
+  display:grid;
+  gap:10px;
+}
+
+.contact-line{
+  display:flex;
+  justify-content:space-between;
+  padding:12px 14px;
+  background:#fff;
+  border-radius:14px;
+}
+
+.label{
+  font-weight:bold;
+}
+
+.footer{
+  background:#2a2a2a;
+  color:#aaa;
+  padding:30px 10px;
+}
+
+.credit{
+  font-size:12px;
+  opacity:0.6;
+}
+
+
+/* Logo / Accessibility */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.brand{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:18px;}
+.logo{width:240px;max-width:70vw;height:auto;display:block;}
+.logo.small{width:180px;max-width:60vw;margin-bottom:6px;}
+.brand-link{display:inline-block;text-decoration:none;}
+
+
+/* ===== Language helpers ===== */
+.hidden{display:none !important;}
+/* Arabic font when Arabic is active */
+html[lang="ar"] body{font-family: "Cairo", Arial, sans-serif;}
+html[lang="en"] body{font-family: Arial, sans-serif;}
+
+/* Language toggle button */
+.lang-toggle{
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 2000;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(17,17,17,.86);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: .5px;
+}
+.lang-toggle:hover{background: rgba(17,17,17,.95);}
+
+/* Make links match the luxury style (no default blue/underline) */
+a{color:inherit;text-decoration:none;}
+a:hover{opacity:.92;}
+.contact-list a{border-bottom: 1px solid rgba(17,17,17,.12);}
+.hero .contact-list a{border-bottom: 1px solid rgba(255,255,255,.18);}
+
+.footer-copy{
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
